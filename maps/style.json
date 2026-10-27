@@ -7,6 +7,84 @@
    "type": "vector",
    "url": "pmtiles://https://skeelet.github.io/tiyn-data/maps/astana.pmtiles",
    "attribution": "© OpenStreetMap"
+  },
+  "own": {
+   "type": "geojson",
+   "data": {
+    "type": "FeatureCollection",
+    "features": [
+     {
+      "type": "Feature",
+      "properties": {
+       "name": "Международный центр ИИ",
+       "kind": "sight"
+      },
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        71.41616,
+        51.08931
+       ]
+      }
+     },
+     {
+      "type": "Feature",
+      "properties": {
+       "name": "ТД Прага",
+       "kind": "mall"
+      },
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        71.471177,
+        51.138315
+       ]
+      }
+     },
+     {
+      "type": "Feature",
+      "properties": {
+       "name": "Keruen City",
+       "kind": "mall"
+      },
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        71.413814,
+        51.145087
+       ]
+      }
+     },
+     {
+      "type": "Feature",
+      "properties": {
+       "name": "Отель Дипломат",
+       "kind": "mall"
+      },
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        71.429448,
+        51.131382
+       ]
+      }
+     },
+     {
+      "type": "Feature",
+      "properties": {
+       "name": "Международный аэропорт Нурсултан Назарбаев",
+       "kind": "sight"
+      },
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        71.4642,
+        51.0259
+       ]
+      }
+     }
+    ]
+   }
   }
  },
  "layers": [
@@ -33,19 +111,35 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "farmland",
-      "grassland",
-      "scrub",
-      "allotments",
-      "meadow"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "farmland",
+       "grassland",
+       "scrub",
+       "allotments",
+       "meadow"
+      ]
      ]
     ]
    ],
@@ -60,15 +154,31 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "residential"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "residential"
+      ]
      ]
     ]
    ],
@@ -83,19 +193,35 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "industrial",
-      "railway",
-      "military",
-      "construction",
-      "brownfield"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "industrial",
+       "railway",
+       "military",
+       "construction",
+       "brownfield"
+      ]
      ]
     ]
    ],
@@ -110,16 +236,32 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "commercial",
-      "retail"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "commercial",
+       "retail"
+      ]
      ]
     ]
    ],
@@ -134,18 +276,34 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "school",
-      "kindergarten",
-      "college",
-      "university"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "school",
+       "kindergarten",
+       "college",
+       "university"
+      ]
      ]
     ]
    ],
@@ -160,15 +318,31 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "hospital"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "hospital"
+      ]
      ]
     ]
    ],
@@ -183,16 +357,32 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "forest",
-      "wood"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "forest",
+       "wood"
+      ]
      ]
     ]
    ],
@@ -207,22 +397,38 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "park",
-      "garden",
-      "recreation_ground",
-      "pitch",
-      "playground",
-      "golf_course",
-      "zoo",
-      "nature_reserve"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "park",
+       "garden",
+       "recreation_ground",
+       "pitch",
+       "playground",
+       "golf_course",
+       "zoo",
+       "nature_reserve"
+      ]
      ]
     ]
    ],
@@ -237,16 +443,32 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "grass",
-      "village_green"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "grass",
+       "village_green"
+      ]
      ]
     ]
    ],
@@ -261,15 +483,31 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
+    "all",
     [
-     "get",
-     "kind"
+     "in",
+     [
+      "geometry-type"
+     ],
+     [
+      "literal",
+      [
+       "Polygon",
+       "MultiPolygon"
+      ]
+     ]
     ],
     [
-     "literal",
+     "in",
      [
-      "cemetery"
+      "get",
+      "kind"
+     ],
+     [
+      "literal",
+      [
+       "cemetery"
+      ]
      ]
     ]
    ],
@@ -284,53 +522,17 @@
    "source-layer": "landuse",
    "minzoom": 0,
    "filter": [
-    "in",
-    [
-     "get",
-     "kind"
-    ],
-    [
-     "literal",
-     [
-      "wetland"
-     ]
-    ]
-   ],
-   "paint": {
-    "fill-color": "#D8E8DE"
-   }
-  },
-  {
-   "id": "water",
-   "type": "fill",
-   "source": "protomaps",
-   "source-layer": "water",
-   "minzoom": 13,
-   "paint": {
-    "fill-color": "#A9D3F1"
-   }
-  },
-  {
-   "id": "water-far",
-   "type": "fill",
-   "source": "protomaps",
-   "source-layer": "water",
-   "maxzoom": 13,
-   "filter": [
-    "any",
+    "all",
     [
      "in",
      [
-      "get",
-      "kind_detail"
+      "geometry-type"
      ],
      [
       "literal",
       [
-       "lake",
-       "basin",
-       "reservoir",
-       "pond"
+       "Polygon",
+       "MultiPolygon"
       ]
      ]
     ],
@@ -343,15 +545,13 @@
      [
       "literal",
       [
-       "lake",
-       "basin",
-       "reservoir"
+       "wetland"
       ]
      ]
     ]
    ],
    "paint": {
-    "fill-color": "#A9D3F1"
+    "fill-color": "#D8E8DE"
    }
   },
   {
@@ -373,7 +573,7 @@
     ]
    ],
    "paint": {
-    "line-color": "#8EC3EA",
+    "line-color": "#A9D3F1",
     "line-width": [
      "interpolate",
      [
@@ -384,18 +584,36 @@
       "zoom"
      ],
      9,
-     1.5,
-     12,
-     4,
-     12.99,
-     4.5,
+     1,
      13,
-     1.3,
+     1.5,
      15,
-     2,
+     2.5,
      18,
      5
     ]
+   }
+  },
+  {
+   "id": "water",
+   "type": "fill",
+   "source": "protomaps",
+   "source-layer": "water",
+   "filter": [
+    "in",
+    [
+     "geometry-type"
+    ],
+    [
+     "literal",
+     [
+      "Polygon",
+      "MultiPolygon"
+     ]
+    ]
+   ],
+   "paint": {
+    "fill-color": "#A9D3F1"
    }
   },
   {
@@ -442,34 +660,6 @@
      0.4,
      18,
      1
-    ]
-   }
-  },
-  {
-   "id": "boundaries",
-   "type": "line",
-   "source": "protomaps",
-   "source-layer": "boundaries",
-   "filter": [
-    "in",
-    [
-     "get",
-     "kind"
-    ],
-    [
-     "literal",
-     [
-      "county",
-      "locality"
-     ]
-    ]
-   ],
-   "paint": {
-    "line-color": "#C9BDA9",
-    "line-width": 1,
-    "line-dasharray": [
-     3,
-     2
     ]
    }
   },
@@ -1209,34 +1399,64 @@
    "filter": [
     "all",
     [
-     "has",
-     "name"
+     "==",
+     [
+      "get",
+      "kind"
+     ],
+     "mall"
     ],
     [
      "in",
      [
       "get",
-      "kind"
+      "name"
      ],
      [
       "literal",
       [
-       "mall"
+       "Mega Silk Way",
+       "Хан Шатыр",
+       "Керуен",
+       "Abu Dhabi Plaza",
+       "Asia Park",
+       "Astana Mall",
+       "Green Mall",
+       "Damu Mall",
+       "Сарыарқа",
+       "Еуразия"
       ]
      ]
     ]
    ],
    "layout": {
     "text-field": [
-     "coalesce",
-     [
-      "get",
-      "name:ru"
-     ],
+     "match",
      [
       "get",
       "name"
-     ]
+     ],
+     "Mega Silk Way",
+     "Mega Silk Way",
+     "Хан Шатыр",
+     "Хан Шатыр",
+     "Керуен",
+     "Keruen",
+     "Abu Dhabi Plaza",
+     "Abu Dhabi Plaza",
+     "Asia Park",
+     "Asia Park",
+     "Astana Mall",
+     "Astana Mall",
+     "Green Mall",
+     "Green Mall",
+     "Damu Mall",
+     "Damu Mall",
+     "Сарыарқа",
+     "Сарыарка",
+     "Еуразия",
+     "Евразия",
+     ""
     ],
     "text-font": [
      "Noto Sans Medium"
@@ -1244,6 +1464,104 @@
     "text-size": 12,
     "text-max-width": 7,
     "symbol-sort-key": 1
+   },
+   "paint": {
+    "text-color": "#8A5A2B",
+    "text-halo-color": "#FFFFFF",
+    "text-halo-width": 1.6
+   }
+  },
+  {
+   "id": "poi-mall-small",
+   "type": "symbol",
+   "source": "protomaps",
+   "source-layer": "pois",
+   "minzoom": 14,
+   "filter": [
+    "all",
+    [
+     "==",
+     [
+      "get",
+      "kind"
+     ],
+     "mall"
+    ],
+    [
+     "in",
+     [
+      "get",
+      "name"
+     ],
+     [
+      "literal",
+      [
+       "ТЦ \"АРУЖАН\"",
+       "Торговый дом Дэн",
+       "Встреча",
+       "Еуразия-3"
+      ]
+     ]
+    ]
+   ],
+   "layout": {
+    "text-field": [
+     "match",
+     [
+      "get",
+      "name"
+     ],
+     "ТЦ \"АРУЖАН\"",
+     "ТЦ Аружан",
+     "Торговый дом Дэн",
+     "ТД Дэн",
+     "Встреча",
+     "ТД Встреча",
+     "Еуразия-3",
+     "Евразия-3",
+     ""
+    ],
+    "text-font": [
+     "Noto Sans Medium"
+    ],
+    "text-size": 12,
+    "text-max-width": 7,
+    "symbol-sort-key": 5
+   },
+   "paint": {
+    "text-color": "#8A5A2B",
+    "text-halo-color": "#FFFFFF",
+    "text-halo-width": 1.6
+   }
+  },
+  {
+   "id": "own-mall",
+   "type": "symbol",
+   "source": "own",
+   "minzoom": 14,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "mall"
+   ],
+   "layout": {
+    "text-field": [
+     "get",
+     "name"
+    ],
+    "text-font": [
+     "Noto Sans Medium"
+    ],
+    "text-size": 12,
+    "text-max-width": 7,
+    "symbol-sort-key": 5,
+    "text-offset": [
+     0,
+     1.4
+    ]
    },
    "paint": {
     "text-color": "#8A5A2B",
@@ -1264,19 +1582,111 @@
      "name"
     ],
     [
-     "in",
+     "any",
      [
-      "get",
-      "kind"
+      "all",
+      [
+       "in",
+       [
+        "get",
+        "kind"
+       ],
+       [
+        "literal",
+        [
+         "attraction",
+         "theatre",
+         "stadium",
+         "zoo"
+        ]
+       ]
+      ],
+      [
+       "<=",
+       [
+        "coalesce",
+        [
+         "get",
+         "min_zoom"
+        ],
+        99
+       ],
+       28
+      ]
      ],
      [
-      "literal",
+      "all",
       [
-       "attraction",
-       "museum",
-       "theatre",
-       "stadium",
-       "zoo"
+       "==",
+       [
+        "get",
+        "kind"
+       ],
+       "museum"
+      ],
+      [
+       "<=",
+       [
+        "coalesce",
+        [
+         "get",
+         "min_zoom"
+        ],
+        99
+       ],
+       30
+      ]
+     ],
+     [
+      "all",
+      [
+       "==",
+       [
+        "get",
+        "kind"
+       ],
+       "monument"
+      ],
+      [
+       "==",
+       [
+        "coalesce",
+        [
+         "get",
+         "name:ru"
+        ],
+        [
+         "get",
+         "name"
+        ]
+       ],
+       "Байтерек"
+      ]
+     ],
+     [
+      "all",
+      [
+       "==",
+       [
+        "get",
+        "kind"
+       ],
+       "museum"
+      ],
+      [
+       "==",
+       [
+        "coalesce",
+        [
+         "get",
+         "name:ru"
+        ],
+        [
+         "get",
+         "name"
+        ]
+       ],
+       "Национальный музей Республики Казахстан"
       ]
      ]
     ]
@@ -1298,6 +1708,37 @@
     ],
     "text-size": 12,
     "text-max-width": 7,
+    "symbol-sort-key": 2
+   },
+   "paint": {
+    "text-color": "#7A4E8C",
+    "text-halo-color": "#FFFFFF",
+    "text-halo-width": 1.6
+   }
+  },
+  {
+   "id": "own-sight",
+   "type": "symbol",
+   "source": "own",
+   "minzoom": 13,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "sight"
+   ],
+   "layout": {
+    "text-field": [
+     "get",
+     "name"
+    ],
+    "text-font": [
+     "Noto Sans Medium"
+    ],
+    "text-size": 12,
+    "text-max-width": 8,
     "symbol-sort-key": 2
    },
    "paint": {
