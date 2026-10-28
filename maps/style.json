@@ -31,14 +31,13 @@
       "type": "Feature",
       "properties": {
        "name": "ТД Прага",
-       "kind": "mall",
-       "below": 1
+       "kind": "mall"
       },
       "geometry": {
        "type": "Point",
        "coordinates": [
-        71.471177,
-        51.138315
+        71.470941,
+        51.138327
        ]
       }
      },
