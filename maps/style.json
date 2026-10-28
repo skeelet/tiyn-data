@@ -31,7 +31,8 @@
       "type": "Feature",
       "properties": {
        "name": "ТД Прага",
-       "kind": "mall"
+       "kind": "mall",
+       "below": 1
       },
       "geometry": {
        "type": "Point",
@@ -44,14 +45,14 @@
      {
       "type": "Feature",
       "properties": {
-       "name": "Keruen City",
+       "name": "KeruenCity",
        "kind": "mall"
       },
       "geometry": {
        "type": "Point",
        "coordinates": [
-        71.413814,
-        51.145087
+        71.413942,
+        51.145412
        ]
       }
      },
@@ -59,7 +60,8 @@
       "type": "Feature",
       "properties": {
        "name": "Отель Дипломат",
-       "kind": "mall"
+       "kind": "mall",
+       "below": 1
       },
       "geometry": {
        "type": "Point",
@@ -1453,7 +1455,7 @@
      "Damu Mall",
      "Damu Mall",
      "Сарыарқа",
-     "Сарыарка",
+     "Saryarqa",
      "Еуразия",
      "Евразия",
      ""
@@ -1559,8 +1561,26 @@
     "text-max-width": 7,
     "symbol-sort-key": 5,
     "text-offset": [
-     0,
-     1.4
+     "match",
+     [
+      "get",
+      "below"
+     ],
+     1,
+     [
+      "literal",
+      [
+       0,
+       1.4
+      ]
+     ],
+     [
+      "literal",
+      [
+       0,
+       0
+      ]
+     ]
     ]
    },
    "paint": {
@@ -1604,14 +1624,14 @@
       [
        "<=",
        [
-        "coalesce",
+        "to-number",
         [
          "get",
          "min_zoom"
         ],
         99
        ],
-       28
+       14
       ]
      ],
      [
@@ -1627,14 +1647,14 @@
       [
        "<=",
        [
-        "coalesce",
+        "to-number",
         [
          "get",
          "min_zoom"
         ],
         99
        ],
-       30
+       15
       ]
      ],
      [
