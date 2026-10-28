@@ -58,15 +58,14 @@
      {
       "type": "Feature",
       "properties": {
-       "name": "Отель Дипломат",
-       "kind": "mall",
-       "below": 1
+       "name": "Дипломат",
+       "kind": "mall"
       },
       "geometry": {
        "type": "Point",
        "coordinates": [
-        71.429448,
-        51.131382
+        71.42917,
+        51.13153
        ]
       }
      },
