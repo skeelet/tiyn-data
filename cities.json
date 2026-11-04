@@ -1,0 +1,25 @@
+{
+ "format": 2,
+ "cities": [
+  {
+   "id": "ast",
+   "name": "Астана",
+   "center": [
+    51.128,
+    71.43
+   ],
+   "bounds": [
+    71.18,
+    50.95,
+    71.8,
+    51.32
+   ],
+   "map": {
+    "file": "maps/astana.pmtiles",
+    "bytes": 9664633
+   },
+   "places": "ast/places.json",
+   "rates": "ast/rates.json"
+  }
+ ]
+}
